@@ -8,6 +8,7 @@ class BookList extends Component {
           <li>the way of kings</li>
           <li>the name of the wind</li>
           <li>the final empire</li>
+          <li>Lorem ipsum dolor sit amet.</li>
         </ul>
       </div>
     );
