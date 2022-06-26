@@ -6,7 +6,8 @@ class Navbar extends Component {
   // static contextType = ThemeContext;
   render() {
     return (
-      <AuthContext>{(authContext) => (
+      // There was error that AuthContext will not work on it's one. That is why I added .Consumer
+      <AuthContext.Consumer>{(authContext) => (
         <ThemeContext.Consumer>{(themeContext) => {
           const { isAuthenticated, toggleAuth } = authContext;
           const { isLightTheme, light, dark } = themeContext;
@@ -25,7 +26,7 @@ class Navbar extends Component {
             </nav>
           )
         }}</ThemeContext.Consumer>
-      )}</AuthContext>
+      )}</AuthContext.Consumer>
     );
   }
 }
