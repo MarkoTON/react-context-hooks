@@ -11,9 +11,13 @@ const BookList = () => {
           return ( <BookDetails book={book} key={book.id} /> );
         })}
       </ul>
+      <br />
     </div>
   ) : (
-    <div className="empty">No books to read. Hello free time :).</div>
+    <div>
+      <div className="empty">No books to read. Hello free time :). </div>
+      <br/>
+    </div>
   );
 }
 
