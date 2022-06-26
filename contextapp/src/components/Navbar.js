@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 import { ThemeContext } from '../contexts/ThemeContext';
 
 class Navbar extends Component {
+  // This will work only in class base not funcional
+  // contextType is standard, its not new name
   static contextType = ThemeContext;
   render() {
+    console.log(this.contextType);
     console.log(this.context);
     const { isLightTheme, light, dark } = this.context;
     const theme = isLightTheme ? light : dark;
