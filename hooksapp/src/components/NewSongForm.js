@@ -6,9 +6,11 @@ const NewSongForm = ({ addSong }) => {
   const [artist, setArtist] = useState('');
   const handleSubmit = (e) => {
     e.preventDefault();
-    addSong(title);
-    setTitle('');
+    addSong(title); // salje title kao props prema SongList
+    setTitle(''); // Resetuje input i vrednos u useState
   }
+
+  console.log(title);
   return (
     <form onSubmit={handleSubmit}>
       <label>Song name:</label>
