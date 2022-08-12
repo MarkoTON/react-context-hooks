@@ -5,6 +5,7 @@ class Navbar extends Component {
   // static contextType = ThemeContext;
   render() {
     return ( 
+      // Drugi nacin za potrosnju podataka
       <ThemeContext.Consumer>{(context) => {
         const { isLightTheme, light, dark } = context;
         const theme = isLightTheme ? light : dark;
