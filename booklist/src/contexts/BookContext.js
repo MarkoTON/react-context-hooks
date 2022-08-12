@@ -16,6 +16,7 @@ const BookContextProvider = (props) => {
   }
 
   return (
+    // Obratiti paznju kako salje state i funkcije. 
     <BookContext.Provider value={{ books, addBook, removeBook }}>
       {props.children}
     </BookContext.Provider>
