@@ -6,6 +6,7 @@ class Navbar extends Component {
   render() {
     return ( 
       // Drugi nacin za potrosnju podataka
+      // Moze da se koristi u Functional components 
       <ThemeContext.Consumer>{(context) => {
         const { isLightTheme, light, dark } = context;
         const theme = isLightTheme ? light : dark;
