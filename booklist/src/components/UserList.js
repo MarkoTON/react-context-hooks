@@ -1,23 +1,10 @@
-import React, { useContext , useEffect } from 'react';
+import React, { useContext } from 'react';
 import UserDetails from './UserDetails';
 import { UserContext } from '../contexts/UserContext';
 
-const UserList = (test) => {
-  console.log(test) // Nothing is pess so nothing to show just empthy {}
+const UserList = () => {
   const { users } = useContext(UserContext)
-  console.log('Coming from UserList.js')
-  console.log(users)
   const { dispatch } = useContext(UserContext)
-
-
-  // useEffect(() => {
-  //   fetch('https://jsonplaceholder.typicode.com/users')
-  //     .then((response) => response.json())
-  //     .then((data) => dispatch({type:'SET_USERS_FROM_API', users: data}))
-  //     .catch((error) => console.log(error));
-
-  //     console.log(users);
-  // }, []);
 
   return users.length ? (
     <div className="user-list">

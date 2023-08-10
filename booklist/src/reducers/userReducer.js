@@ -11,9 +11,11 @@ export const userReducer = (state, action) => {
       }
       ]
     case 'SET_USERS_FROM_API':
-      console.log(action.users)
-      // return state = action.users
-      return action.users
+      // if(state.users[0].id === action.users[0].id){
+      //   return state
+      // } else {
+        return action.users
+      // }
     case 'REMOVE_USER':
       return state.filter(user => user.id !== action.id);
     case 'REMOVE_ALL':
