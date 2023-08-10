@@ -10,6 +10,7 @@ const UserContextProvider = (props) => {
   });
   useEffect(() => {
     localStorage.setItem('users', JSON.stringify(users));
+    
   }, [users]);
 
   return (
