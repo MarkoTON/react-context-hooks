@@ -10,14 +10,14 @@ const UserList = (test) => {
   const { dispatch } = useContext(UserContext)
 
 
-  useEffect(() => {
-    fetch('https://jsonplaceholder.typicode.com/users')
-      .then((response) => response.json())
-      .then((data) => dispatch({type:'SET_USERS_FROM_API', users: data}))
-      .catch((error) => console.log(error));
+  // useEffect(() => {
+  //   fetch('https://jsonplaceholder.typicode.com/users')
+  //     .then((response) => response.json())
+  //     .then((data) => dispatch({type:'SET_USERS_FROM_API', users: data}))
+  //     .catch((error) => console.log(error));
 
-      console.log(users);
-  }, []);
+  //     console.log(users);
+  // }, []);
 
   return users.length ? (
     <div className="user-list">
